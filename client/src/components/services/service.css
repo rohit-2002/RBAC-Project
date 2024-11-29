@@ -1,0 +1,21 @@
+.card {
+  width: 350px;
+  padding: 2rem;
+  background-color: var(--background-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card button {
+  width: 90%;
+  margin: 10px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.card button:hover {
+  background: var(--secondary-color);
+}

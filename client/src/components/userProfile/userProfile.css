@@ -1,0 +1,27 @@
+.card3 h2 {
+  color: white; /* Default color for h2 */
+}
+
+.card3 h2 .highlight {
+  color: var(--primary-color); /* Different color for Hello... */
+}
+
+.card3 h3 {
+  color: white; /* Color for h3 elements */
+}
+
+.card3 h2,
+h3 {
+  color: var(--primary-color);
+}
+
+.card3 button {
+  background: #ff4c4c;
+  color: #fff;
+  width: 50%;
+  margin-top: 15px;
+}
+
+.card3 button:hover {
+  background: #d92626;
+}

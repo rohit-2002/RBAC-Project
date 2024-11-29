@@ -1,0 +1,140 @@
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #045f0b;
+  --background-light: #f4f5f7;
+  --background-dark: #2c2c2c;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --border-color: #ddd;
+  --font-family: "Poppins", sans-serif;
+  --gradient-background: linear-gradient(to right, #93f9b9, #1d976c);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--gradient-background);
+  color: var(--text-dark);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.card,
+.card2 {
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.card {
+  background: linear-gradient(135deg, #242424, #383838);
+  color: var(--text-dark);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #3a3a3a, #505050);
+}
+
+.card2 {
+  background: linear-gradient(135deg, #242424, #383838);
+  color: var(--text-light);
+}
+
+.card2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #3a3a3a, #505050);
+}
+
+.card h3,
+.card2 h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.card p,
+.card2 p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card .icon,
+.card2 .icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.card button,
+.card2 button {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 1rem; /* Space between the button and other content */
+  transition: background-color 0.3s ease;
+  width: 100%; /* Makes the button fill the width of the card */
+}
+
+.card button:hover,
+.card2 button:hover {
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .panel {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .card,
+  .card2 {
+    width: 90%;
+    max-width: 350px;
+  }
+}
