@@ -14,11 +14,14 @@ const ServicesCard = () => {
     }
 
     axios
-      .get(`https://rbac-project-1-he77.onrender.com/${serviceEndpoint}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      .get(
+        `https://rbac-project-1-he77.onrender.com/service/${serviceEndpoint}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
       .then((response) => {
         alert(response.data.message);
       })
