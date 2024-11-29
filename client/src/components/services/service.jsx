@@ -14,27 +14,45 @@ const ServicesCard = () => {
     }
 
     axios
-      .get(`https://vrv-assignment-a6zw.onrender.com/service/${serviceEndpoint}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      .get(
+        `https://rbac-project-v12x.onrender.com/service/${serviceEndpoint}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
       .then((response) => {
         alert(response.data.message);
       })
       .catch((error) => {
-        console.error(`Error accessing ${serviceEndpoint}:`, error.response?.data || error.message);
-        alert(`Error: ${error.response?.data?.message || "Failed to access the service."}`);
+        console.error(
+          `Error accessing ${serviceEndpoint}:`,
+          error.response?.data || error.message
+        );
+        alert(
+          `Error: ${
+            error.response?.data?.message || "Failed to access the service."
+          }`
+        );
       });
   };
 
   return (
     <div className="card2">
       <h2>Services you can access:</h2>
-      <button onClick={() => handleServiceClick("cctv")}>CCTV Surveillance</button>
-      <button onClick={() => handleServiceClick("gdeployed")}>Guards Deployment</button>
-      <button onClick={() => handleServiceClick("attendence")}>Attendance Records</button>
-      <button onClick={() => handleServiceClick("activeunits")}>Active Units</button>
+      <button onClick={() => handleServiceClick("cctv")}>
+        CCTV Surveillance
+      </button>
+      <button onClick={() => handleServiceClick("gdeployed")}>
+        Guards Deployment
+      </button>
+      <button onClick={() => handleServiceClick("attendence")}>
+        Attendance Records
+      </button>
+      <button onClick={() => handleServiceClick("activeunits")}>
+        Active Units
+      </button>
     </div>
   );
 };
