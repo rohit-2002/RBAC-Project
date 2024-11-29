@@ -36,7 +36,7 @@ const FlipCard = (props) => {
     e.preventDefault();
     try {
       const response = await axios
-        .post("https://rbac-project-v12x.onrender.com/signin", loginData)
+        .post("https://rbac-project-1-he77.onrender.com/signin", loginData)
         .then((response) => {
           const { token, role, employee_id } = response.data;
 
@@ -62,7 +62,7 @@ const FlipCard = (props) => {
     e.preventDefault();
     try {
       const response = await axios
-        .post("https://rbac-project-v12x.onrender.com/signup", registerData)
+        .post("https://rbac-project-1-he77.onrender.com/signup", registerData)
         .then((response) => {
           const { token, role, employee_id } = response.data;
 
